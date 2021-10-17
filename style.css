@@ -18,6 +18,7 @@ body {
   background: #fff;
   background-blend-mode: soft-light;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -202,6 +203,13 @@ main .main-content {
 main .main-content .section {
   min-height: 100vh !important;
   padding: 50px;
+}
+
+main .main-content .section h1.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 main .main-content .section.reveal {

@@ -57,6 +57,7 @@ body{
 	background: $bgWhite;
 	background-blend-mode: soft-light;
 	overflow-x: hidden;
+	overflow-y: hidden;
 
 	&::-webkit-scrollbar{
 		width: 0.50rem;
@@ -226,6 +227,13 @@ main{
 		.section{
 			min-height: 100vh !important;
 			padding: 50px;
+
+			h1.title{
+				font-family: 'Inter', sans-serif;
+				font-size: 5rem;
+				font-weight: 700;
+				text-align: center;
+			}
 
 			&.reveal{
 				position: relative;

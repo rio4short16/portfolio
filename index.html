@@ -68,31 +68,31 @@
 				<!-- Social Links -->
 				<ul>
 					<li>
-						<a href="javascript:void(0)">
+						<a href="https://www.facebook.com/riocarpio16/" target="_blank">
 							<span class="icon"><i class="fab fa-facebook-f"></i></span>
 							<span class="title">Facebook</span>
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)">
+						<a href="javascript:void(0)" target="_blank">
 							<span class="icon"><i class="fab fa-linkedin-in"></i></span>
 							<span class="title">LinkedIn</span>
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)">
+						<a href="https://twitter.com/fistrio16" target="_blank">
 							<span class="icon"><i class="fab fa-twitter"></i></span>
 							<span class="title">Twitter</span>
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)">
+						<a href="https://www.instagram.com/fistrio16/" target="_blank">
 							<span class="icon"><i class="fab fa-instagram"></i></i></span>
 							<span class="title pr-3">Instagram</span>
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)">
+						<a href="mailto:ryocarpio16@gmail.com">
 							<span class="icon"><i class="fas fa-envelope"></i></span>
 							<span class="title">Gmail</span>
 						</a>
@@ -118,6 +118,16 @@
 
 			</div>
 			<div id="skills" class="section">
+				<h1 class="title">Knowledge & Skills</h1>
+			</div>
+			<div id="education" class="section">
+				<h1 class="title">Education</h1>
+			</div>
+			<div id="projects" class="section">
+				<h1 class="title">Projects</h1>
+			</div>
+			<div id="workexp" class="section">
+				<h1 class="title">Work Experience</h1>
 			</div>
 			<div id="contact" class="section">
 				<h1 class="title">Contact Me</h1>
@@ -159,6 +169,30 @@
 			}, 1000);
 			return false;
 		});
+		$("#educationbtn").click(function () {
+			$('.toggle').css('border', '5px solid #fff')
+			$("html, body").animate({
+				scrollTop: $("#education").offset().top
+			}, 1000);
+			return false;
+		});
+		$("#projectbtn").click(function () {
+			$('.toggle').css('border', '5px solid #fff')
+			$("html, body").animate({
+				scrollTop: $("#projects").offset().top
+			}, 1000);
+			return false;
+		});
+
+
+		$("#workbtn").click(function () {
+			$('.toggle').css('border', '5px solid #fff')
+			$("html, body").animate({
+				scrollTop: $("#workexp").offset().top
+			}, 1000);
+			return false;
+		});
+
 		$("#contactbtn").click(function () {
 			$('.toggle').css('border', '5px solid #fff')
 			$("html, body").animate({
