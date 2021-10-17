@@ -202,31 +202,49 @@ main .main-content {
 
 main .main-content .section {
   min-height: 100vh !important;
-  padding: 50px;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content .section {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content .section {
+    padding: 25px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .main-content .section {
+    padding: 30px;
+  }
 }
 
 main .main-content .section .sec-title {
   font-family: 'Inter', sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 900;
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
   main .main-content .section .sec-title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
   main .main-content .section .sec-title {
-    font-size: 6rem;
+    font-size: 3.2rem;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   main .main-content .section .sec-title {
-    font-size: 8rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -345,7 +363,7 @@ main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm
 
 @media only screen and (min-width: 1280px) {
   main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm-card .cm-caption span {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
 }
 
@@ -369,12 +387,6 @@ main .main-content #about .cm-card .cm-caption h6 {
 @media only screen and (min-width: 1280px) {
   main .main-content #about .cm-card .cm-caption h6 {
     font-size: 1.8rem;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  main .main-content #about .cm-card .cm-caption h6 {
-    font-size: 2rem;
   }
 }
 
