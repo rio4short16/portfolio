@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap");
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff;
+  background-blend-mode: soft-light;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.50rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #e06100;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-button {
+  background: #e06100;
+}
+
+ol, ul, dl {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main {
+  display: flex;
+  overflow-x: hidden;
+}
+
+main .nav-container {
+  position: fixed;
+  z-index: 99999;
+  height: 100vh;
+  transition: all ease-in 0.3s;
+}
+
+@media only screen and (max-width: 599px) {
+  main .nav-container {
+    width: 60px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  main .nav-container {
+    width: 260px;
+  }
+  main .nav-container.min {
+    width: 60px;
+  }
+}
+
+main .nav-container.expand {
+  width: 260px;
+}
+
+main .nav-container .navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e06100;
+  overflow: hidden;
+  box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 600px) {
+  main .nav-container .navigation {
+    padding: 2.5rem 0;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .nav-container .navigation {
+    padding: 3rem 0;
+  }
+}
+
+main .nav-container .navigation ul li {
+  list-style: none;
+}
+
+main .nav-container .navigation ul li a {
+  display: block;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 600px) {
+  main .nav-container .navigation ul li a {
+    height: 60px;
+  }
+}
+
+main .nav-container .navigation ul li a:hover {
+  background: #ff872b;
+}
+
+main .nav-container .navigation ul li a span {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+  main .nav-container .navigation ul li a span {
+    line-height: 60px;
+  }
+}
+
+main .nav-container .navigation ul li a .icon {
+  min-width: 60px;
+}
+
+main .nav-container .navigation ul li a .icon .fas, main .nav-container .navigation ul li a .icon .fab {
+  font-size: 24px;
+}
+
+main .nav-container .navigation ul li a .title {
+  padding-left: 8px;
+  white-space: nowrap;
+}
+
+main .nav-container .navigation ul li a .title.pr-3 {
+  padding-right: 20px;
+}
+
+main .nav-container .toggle {
+  display: none;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #e06100;
+  border: 5px solid #000;
+  border-radius: 50%;
+  transition: all ease-in 1s;
+}
+
+main .nav-container .toggle:hover {
+  background: #ff872b;
+}
+
+@media only screen and (min-width: 600px) {
+  main .nav-container .toggle {
+    display: block;
+  }
+}
+
+main .nav-container .toggle.min::before {
+  content: '\f054';
+}
+
+main .nav-container .toggle::before {
+  content: '\f053';
+  font-family: 'fontAwesome';
+  position: absolute;
+  width: 100%;
+  line-height: 40px;
+  height: 100%;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+main .main-content {
+  margin-left: 60px;
+  width: 100%;
+  min-height: 100vh;
+  transition: all ease-in 0.3s;
+}
+
+main .main-content .section {
+  min-height: 100vh !important;
+  padding: 50px;
+}
+
+main .main-content .section.reveal {
+  position: relative;
+  transition: all 1s ease-out;
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+main .main-content .section.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+main .main-content #about {
+  position: relative;
+}
+
+main .main-content #about .cm-card {
+  position: absolute;
+  z-index: 4;
+  top: calc(50% - 200px);
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 15px;
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 600px;
+  height: 400px;
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #about .cm-card {
+    transform: translateX(0);
+    left: 120px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+main .main-content #about .cm-card img {
+  display: block;
+  position: relative;
+  left: 0;
+  margin: auto;
+  width: 250px;
+  height: auto;
+  border-radius: 50% !important;
+  border: 10px solid #e06100;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #about .cm-card img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #about .cm-card img {
+    width: 320px;
+  }
+}
+
+main .main-content #about .cm-card .cm-caption {
+  position: relative;
+  margin-left: 0;
+  margin-top: 30px;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #about .cm-card .cm-caption {
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 0;
+  }
+}
+
+main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm-card .cm-caption span {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #e06100;
+  font-family: 'Inter', sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm-card .cm-caption span {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm-card .cm-caption span {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .main-content #about .cm-card .cm-caption h1, main .main-content #about .cm-card .cm-caption span {
+    font-size: 8rem;
+  }
+}
+
+main .main-content #about .cm-card .cm-caption h6 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #about .cm-card .cm-caption h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #about .cm-card .cm-caption h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .main-content #about .cm-card .cm-caption h6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .main-content #about .cm-card .cm-caption h6 {
+    font-size: 2rem;
+  }
+}
+
+main .main-content #about .stars {
+  background: #000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+main .main-content #about .twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  animation: move-background 70s linear infinite;
+}
+
+main .main-content #about .clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  animation: move-background 150s linear infinite;
+}
+
+main .main-content #about img {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+}
+
+main .main-content #skills {
+  position: relative;
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0;
+    right: -100px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
