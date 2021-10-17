@@ -205,11 +205,29 @@ main .main-content .section {
   padding: 50px;
 }
 
-main .main-content .section h1.title {
+main .main-content .section .sec-title {
   font-family: 'Inter', sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content .section .sec-title {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content .section .sec-title {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .main-content .section .sec-title {
+    font-size: 8rem;
+  }
 }
 
 main .main-content .section.reveal {
@@ -233,7 +251,7 @@ main .main-content #about .cm-card {
   z-index: 4;
   top: calc(50% - 200px);
   transform: translateX(-50%);
-  left: 50%;
+  left: 43%;
   border-radius: 15px;
   padding: 25px 50px;
   display: flex;
@@ -243,6 +261,12 @@ main .main-content #about .cm-card {
   width: auto;
   min-width: 600px;
   height: 400px;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #about .cm-card {
+    left: 50%;
+  }
 }
 
 @media only screen and (min-width: 960px) {
