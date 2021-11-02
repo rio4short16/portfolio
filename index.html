@@ -324,18 +324,61 @@
 				}	
 			})
 		})
+		if(window.innerWidth > 599){
+				links.forEach(link => {
+					link.onmouseenter = function () {
+						if (navcontainer.classList.contains('min')) {
+							navcontainer.classList.add('expand')
+						}
+					}
+					link.onmouseleave = function () {
 
-		window.addEventListener('resize', function () {
-			// console.log(window.innerWidth)
-			if (window.innerWidth < 600 && !togglebtn.classList.contains('min'))
+						if (navcontainer.classList.contains('min')) {
+							navcontainer.classList.remove('expand')
+						}
+					}
+				})
+			}
+			if (window.innerWidth < 600 && !togglebtn.classList.contains('min')){
 				maincontent.style.marginLeft = "60px";
-			else if (window.innerWidth > 599 && !togglebtn.classList.contains('min'))
+
+				
+			}
+				
+			else if (window.innerWidth > 599 && !togglebtn.classList.contains('min')){
 				maincontent.style.marginLeft = "260px";
-		});
+			}
+
+		window.addEventListener('resize', function(){
+			if(window.innerWidth > 599){
+				links.forEach(link => {
+					link.onmouseenter = function () {
+						if (navcontainer.classList.contains('min')) {
+							navcontainer.classList.add('expand')
+						}
+					}
+					link.onmouseleave = function () {
+
+						if (navcontainer.classList.contains('min')) {
+							navcontainer.classList.remove('expand')
+						}
+					}
+				})
+			}
+			if (window.innerWidth < 600 && !togglebtn.classList.contains('min')){
+				maincontent.style.marginLeft = "60px";
+
+				
+			}
+				
+			else if (window.innerWidth > 599 && !togglebtn.classList.contains('min')){
+				maincontent.style.marginLeft = "260px";
+			};
+		})
+		
+		
 
 		togglebtn.addEventListener('click', function () {
-			this.classList.toggle('min')
-			navcontainer.classList.toggle('min')
 
 			if (this.classList.contains('min')) {
 				maincontent.style.marginLeft = "60px";
@@ -348,21 +391,7 @@
 
 		})
 
-		links.forEach(link => {
-			link.onmouseenter = function () {
-				if (navcontainer.classList.contains('min')) {
-					navcontainer.classList.add('expand')
-				}
-			}
-
-			link.onmouseleave = function () {
-
-				if (navcontainer.classList.contains('min')) {
-					navcontainer.classList.remove('expand')
-				}
-
-			}
-		})
+		
 
 		const sr = ScrollReveal({
 			origin: 'bottom',
