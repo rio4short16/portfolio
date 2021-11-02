@@ -56,8 +56,7 @@ body{
 	// background: rgba(0,0,0,0.15) url('/images/Sprinkle.svg');
 	background: $bgWhite;
 	background-blend-mode: soft-light;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	// overflow: hidden;
 
 	&::-webkit-scrollbar{
 		width: 0.50rem;
@@ -227,29 +226,34 @@ main{
 		transition: $transition-all;
 		.section{
 			min-height: 100vh !important;
-			padding: 5px;
+			padding: 3rem 20px;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
 
 			@include for-small{
-				padding: 10px;
+				padding: 3rem 22px;
 			}
 			@include for-medium(){
-				padding: 25px;
+				padding: 3.5rem 25px;
 			}
 			@include for-large(){
-				padding: 30px;
+				padding: 3rem 30px;
 			}
 
 			.sec-title{
 				font-family: 'Inter', sans-serif;
-				font-size: 1.2rem;
+				font-size: 2.5rem;
 				font-weight: 900;
 				text-align: center;
 
 				@include for-small(){
-					font-size: 2rem;
+					font-size: 3rem;
 				}
 				@include for-medium(){
-					font-size: 3.2rem;
+					font-size: 3.5rem;
 				}
 				@include for-large(){
 					font-size: 4.5rem;
@@ -275,9 +279,9 @@ main{
 			.cm-card{
 				position: absolute;
 				z-index: 4;
-				top: calc(50% - 200px);
+				top: calc(50% - 210px);
 				transform: translateX(-50%);
-				left:43%;
+				left: 50%;
 
 				border-radius: 15px;
 				padding: 25px 50px;
@@ -294,9 +298,14 @@ main{
 					left: 50%;
 				}
 
-				@include for-medium(){
+				// @include for-medium(){
+				// 	// transform: translateX(0);
+				// 	left: 50%;
+				// }
+
+				@include for-large(){
 					transform: translateX(0);
-					left: 120px;
+					left: 100px;
 					flex-direction: row;
 					justify-content: flex-start;
 					align-items: flex-start;
@@ -313,7 +322,7 @@ main{
 					border: 10px solid $bgSecondary;
 
 					@include for-small(){
-						width: 300px;
+						width: 250px;
 					}
 
 					@include for-medium(){
@@ -324,7 +333,7 @@ main{
 				.cm-caption{
 					position: relative;
 					margin-left: 0;
-					margin-top: 30px;
+					margin-top: 15px;
 					width: auto;
 					height: 100%;
 					display: flex;
@@ -335,8 +344,12 @@ main{
 
 					@include for-medium(){
 						justify-content: center;
-						margin-left: 50px;
+						margin-left: 0px;
 						margin-top: 0;
+					}
+
+					@include for-large(){
+						margin-left: 50px;
 					}
 
 					h1, span{
@@ -350,11 +363,8 @@ main{
 						@include for-small(){
 							font-size: 4rem;
 						}
-						@include for-medium(){
-							font-size: 6rem;
-						}
 						@include for-large(){
-							font-size: 7.5rem;
+							font-size: 6rem;
 						}
 					}
 
@@ -373,10 +383,46 @@ main{
 							font-size: 1.8rem;
 						}
 					}
+					.files{
+						display: flex;
+						justify-content: space-between;
+						padding: 0 5px;
+						width: 100%;
+
+						@include for-small(){
+							justify-content: center;
+						}
+
+						a{
+							font-size: 0.7rem;
+							display: block;
+							margin: 3px 0;
+							color: $bgWhite;
+							text-decoration: none;
+							padding: 2px 15px;
+							background: $bgSecondary !important;
+							border-radius: 10px;
+							box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.7); 
+
+							@include for-small(){
+								padding: 5px 20px;
+								margin: 5px 10px;
+								font-size: 0.85rem;
+								border-radius: 15px;
+							}
+
+							@include for-medium(){
+								padding: 8px 30px;
+								margin: 5px 10px;
+								font-size: 1.2rem;
+								border-radius: 25px;
+							}
+						}
+					}
 				}
 			}
 			.stars {
-				background: #000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+				background: #000 url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
 				position: absolute;
 				 top: 0;
 				 bottom: 0;
@@ -436,7 +482,92 @@ main{
 
 		}
 
-		
+		#education, #workexp{
+
+			.educ-timeline{
+				max-width: 900px;
+				margin: auto;
+
+				.educ-card{
+					padding: 5px;
+					border-radius: 20px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					@include for-small(){
+						padding: 25px;
+					}
+
+					@include for-medium(){
+						paadding: 10px;
+					}
+
+					.cm-icon{
+						width: 80px;
+						height: 80px;
+						padding: 25px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 50%;
+						background: $bgSecondary;
+						color: $bgWhite;
+
+						@include for-medium(){
+							width: 100px;
+							height: 100px;
+							padding: 40px;
+						}
+
+						.fa, .fas, .fab{
+							font-size: 2rem;
+
+							@include for-medium(){
+								font-size: 3rem;
+							}
+						}
+					}
+
+					.acad-info{
+						padding: 0 25px;
+						
+						h6{
+							font-size: 1rem;
+							font-weight: 700;
+							margin-bottom: 0;
+							color: $bgSecondary;
+
+							@include for-medium(){
+								margin-bottom: 5px;
+								font-size: 1.5rem;
+							}
+						}
+
+						.acad-level{
+							font-size: 0.8rem;
+							font-weight: 700;
+							color: $bgColor;
+							@include for-medium(){
+								font-size: 1rem;
+							}
+						}
+
+						p{
+							font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+							font-size: 0.8rem;
+							font-weight: 400;
+							color: $bgColor;
+
+							@include for-medium(){
+								font-size: 1rem;
+							}
+						}
+					}
+
+				}
+			}
+		}
 	}
 }
 
@@ -485,5 +616,7 @@ main{
 	  -webkit-transform: translate3d(1000px, 0px, 0px);
 	}
   }
+
+  @import "timeline";
 
 
