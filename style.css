@@ -493,7 +493,7 @@ main .main-content #skills .skill-container {
 main .main-content #skills .skill-container .skill {
   width: 100%;
   margin: 1.2rem 0;
-  padding: 1.6rem 5rem;
+  padding: 1.6rem 1.5rem;
   border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -501,7 +501,7 @@ main .main-content #skills .skill-container .skill {
 @media only screen and (min-width: 600px) {
   main .main-content #skills .skill-container .skill {
     margin: 1.5rem 0;
-    padding: 1.8rem 6rem;
+    padding: 1.8rem 4rem;
   }
 }
 
