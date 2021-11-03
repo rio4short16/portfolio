@@ -110,7 +110,7 @@ main{
 			height: 100%;
 			background: $bgSecondary;
 			overflow: hidden;
-			box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.7); 
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
 			transition: 0.5s;
 
 			padding: 2rem 0;
@@ -401,7 +401,7 @@ main{
 							padding: 2px 15px;
 							background: $bgSecondary !important;
 							border-radius: 10px;
-							box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.7); 
+							box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
 
 							@include for-small(){
 								padding: 5px 20px;
@@ -478,6 +478,65 @@ main{
 
 		#skills{
 			position: relative;
+
+			.skill-container{
+				position: relative;
+				max-width: 900px;
+				margin: auto;
+
+				.skill{
+					width: 100%;
+					margin: 1.2rem 0;
+					padding: 1.6rem 5rem;
+					border-radius: 30px;
+					box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+					@include for-small(){
+						margin: 1.5rem 0;
+						padding: 1.8rem 6rem;
+					}
+
+					@include for-medium(){
+						margin: 1.8rem 0;
+						padding: 1.8rem 12rem;
+					}
+
+					.skill-title{
+						font-weight: 700;
+						font-size: 1.5rem;
+						margin-bottom: 1.2rem;
+
+						@include for-small(){
+							margin-bottom: 1.5rem;
+							font-size: 1.8rem;
+						}
+	
+						@include for-medium(){
+							margin-bottom: 1.8rem;
+							font-size: 2rem;
+						}
+					}
+
+					h4{
+						font-size: 1.4rem;
+						margin-bottom: 0 !important;
+
+						@include for-small(){
+							margin-bottom: 0rem;
+							font-size: 1.6rem;
+						}
+	
+						@include for-medium(){
+							margin-bottom: 0rem;
+							font-size: 1.6rem;
+						}
+					}
+
+					.progress-bar{
+						background-color: $bgSecondary !important;
+					}
+				}
+			}
 
 		}
 
@@ -565,6 +624,131 @@ main{
 					}
 
 				}
+			}
+		}
+
+		#cert, #projects{
+			.cert-container{
+				position: relative;
+				padding: 1rem 0;
+				max-width: 1400px;
+				margin: auto;
+
+				@include for-small(){
+					padding: 3rem 0;
+				}
+
+				@include for-medium(){
+					padding: 5rem 0;
+				}
+				details{
+					display: block !important;
+					width: 100%;
+
+					summary{
+						display: block !important;
+					}
+				}
+
+				.award-container{
+					display: block;
+					position: relative;
+					cursor: pointer;
+					min-height: 280px;
+
+					&:hover .img-description{
+						visibility: visible;
+						opacity: 1;
+					}
+	
+					.award-img{
+						height: 100%;
+						width: 100%;
+					}
+	
+					.img-description{
+						display: flex;
+						text-align: center;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: rgba(224, 97, 0, 0.95);
+						color: #fff;
+						visibility: hidden;
+						opacity: 0;
+						transition: $transition-all;
+
+						padding: 30px;
+
+						@include for-small(){
+							padding: 35px;
+						}
+
+						@include for-medium(){
+							padding: 40px;
+						}
+
+						h5{
+							font-family: 'Poppins', sans-serif;
+							font-weight: 700;
+							font-size: 1.2rem;
+
+							@include for-small(){
+								font-size: 1.4rem;
+							}
+	
+							@include for-medium(){
+								font-size: 1.8rem;
+							}
+						}
+
+						span{
+							display: block;
+							font-size: 0.8rem;
+							margin: 5px;
+							text-decoration: underline;
+
+							@include for-small(){
+								font-size: 0.9rem;
+							}
+	
+							@include for-medium(){
+								font-size: 0.8rem;
+							}
+						}
+						
+
+						h6{
+							font-family: 'Poppins', sans-serif;
+							font-weight: 700;
+							font-size: 1.5rem;
+
+							@include for-small(){
+								font-size: 1.8rem;
+							}
+	
+							@include for-medium(){
+								font-size: 2.2rem;
+							}
+						}
+
+						p{
+							font-weight: 400;
+							text-align: justify;
+						}
+
+						small{
+							font-weight: 400;
+							text-align: justify;
+						}
+					}
+				}
+				
 			}
 		}
 	}

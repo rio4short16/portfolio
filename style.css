@@ -78,7 +78,7 @@ main .nav-container .navigation {
   height: 100%;
   background: #e06100;
   overflow: hidden;
-  box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.5s;
   padding: 2rem 0;
   display: flex;
@@ -414,7 +414,7 @@ main .main-content #about .cm-card .cm-caption .files a {
   padding: 2px 15px;
   background: #e06100 !important;
   border-radius: 10px;
-  box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -482,6 +482,77 @@ main .main-content #about img {
 
 main .main-content #skills {
   position: relative;
+}
+
+main .main-content #skills .skill-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+main .main-content #skills .skill-container .skill {
+  width: 100%;
+  margin: 1.2rem 0;
+  padding: 1.6rem 5rem;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #skills .skill-container .skill {
+    margin: 1.5rem 0;
+    padding: 1.8rem 6rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #skills .skill-container .skill {
+    margin: 1.8rem 0;
+    padding: 1.8rem 12rem;
+  }
+}
+
+main .main-content #skills .skill-container .skill .skill-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #skills .skill-container .skill .skill-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #skills .skill-container .skill .skill-title {
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+  }
+}
+
+main .main-content #skills .skill-container .skill h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0 !important;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #skills .skill-container .skill h4 {
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #skills .skill-container .skill h4 {
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+  }
+}
+
+main .main-content #skills .skill-container .skill .progress-bar {
+  background-color: #e06100 !important;
 }
 
 main .main-content #education .educ-timeline, main .main-content #workexp .educ-timeline {
@@ -580,6 +651,147 @@ main .main-content #education .educ-timeline .educ-card .acad-info p, main .main
   main .main-content #education .educ-timeline .educ-card .acad-info p, main .main-content #workexp .educ-timeline .educ-card .acad-info p {
     font-size: 1rem;
   }
+}
+
+main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+  position: relative;
+  padding: 1rem 0;
+  max-width: 1400px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+    padding: 3rem 0;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+    padding: 5rem 0;
+  }
+}
+
+main .main-content #cert .cert-container details, main .main-content #projects .cert-container details {
+  display: block !important;
+  width: 100%;
+}
+
+main .main-content #cert .cert-container details summary, main .main-content #projects .cert-container details summary {
+  display: block !important;
+}
+
+main .main-content #cert .cert-container .award-container, main .main-content #projects .cert-container .award-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  min-height: 280px;
+}
+
+main .main-content #cert .cert-container .award-container:hover .img-description, main .main-content #projects .cert-container .award-container:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+main .main-content #cert .cert-container .award-container .award-img, main .main-content #projects .cert-container .award-container .award-img {
+  height: 100%;
+  width: 100%;
+}
+
+main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(224, 97, 0, 0.95);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+    padding: 35px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+    padding: 40px;
+  }
+}
+
+main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+    font-size: 1.8rem;
+  }
+}
+
+main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+  display: block;
+  font-size: 0.8rem;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+    font-size: 0.8rem;
+  }
+}
+
+main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+    font-size: 2.2rem;
+  }
+}
+
+main .main-content #cert .cert-container .award-container .img-description p, main .main-content #projects .cert-container .award-container .img-description p {
+  font-weight: 400;
+  text-align: justify;
+}
+
+main .main-content #cert .cert-container .award-container .img-description small, main .main-content #projects .cert-container .award-container .img-description small {
+  font-weight: 400;
+  text-align: justify;
 }
 
 @keyframes showImage {
