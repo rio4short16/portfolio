@@ -156,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	togglebtn.addEventListener('click', function () {
 
+		this.classList.toggle('min')
+		navcontainer.classList.toggle('min')
+
 		if (this.classList.contains('min')) {
 			maincontent.style.marginLeft = "60px";
 			togglebtn.setAttribute("data-bs-original-title", "Expand")
