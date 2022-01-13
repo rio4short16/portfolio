@@ -504,14 +504,17 @@ main{
 					.skill-title{
 						font-weight: 700;
 						font-size: 1.5rem;
+						margin-top: .3rem;
 						margin-bottom: 1.2rem;
 
 						@include for-small(){
+							margin-top: .5rem;
 							margin-bottom: 1.5rem;
 							font-size: 1.8rem;
 						}
 	
 						@include for-medium(){
+							margin-top: .8rem;
 							margin-bottom: 1.8rem;
 							font-size: 2rem;
 						}

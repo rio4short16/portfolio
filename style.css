@@ -2,13 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap");
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
@@ -42,6 +44,8 @@ ol, ul, dl {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
 }
@@ -50,6 +54,7 @@ main .nav-container {
   position: fixed;
   z-index: 99999;
   height: 100vh;
+  -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
 }
 
@@ -78,12 +83,21 @@ main .nav-container .navigation {
   height: 100%;
   background: #e06100;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (min-width: 600px) {
@@ -106,6 +120,8 @@ main .nav-container .navigation ul li a {
   display: block;
   height: 40px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   color: #fff;
@@ -162,6 +178,7 @@ main .nav-container .toggle {
   background: #e06100;
   border: 5px solid #000;
   border-radius: 50%;
+  -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
 }
 
@@ -195,16 +212,25 @@ main .main-content {
   margin-left: 60px;
   width: 100%;
   min-height: 100vh;
+  -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
 }
 
 main .main-content .section {
   min-height: 100vh !important;
   padding: 3rem 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -252,13 +278,16 @@ main .main-content .section .sec-title {
 
 main .main-content .section.reveal {
   position: relative;
+  -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
   opacity: 0;
 }
 
 main .main-content .section.reveal.active {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
@@ -270,14 +299,24 @@ main .main-content #about .cm-card {
   position: absolute;
   z-index: 4;
   top: calc(50% - 210px);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   left: 50%;
   border-radius: 15px;
   padding: 25px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: auto;
   min-width: 600px;
   height: 400px;
@@ -291,11 +330,19 @@ main .main-content #about .cm-card {
 
 @media only screen and (min-width: 1280px) {
   main .main-content #about .cm-card {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     left: 100px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -328,16 +375,27 @@ main .main-content #about .cm-card .cm-caption {
   margin-top: 15px;
   width: auto;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: #fff;
 }
 
 @media only screen and (min-width: 960px) {
   main .main-content #about .cm-card .cm-caption {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: 0px;
     margin-top: 0;
   }
@@ -393,15 +451,21 @@ main .main-content #about .cm-card .cm-caption h6 {
 }
 
 main .main-content #about .cm-card .cm-caption .files {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 5px;
   width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
   main .main-content #about .cm-card .cm-caption .files {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -414,7 +478,8 @@ main .main-content #about .cm-card .cm-caption .files a {
   padding: 2px 15px;
   background: #e06100 !important;
   border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -456,6 +521,7 @@ main .main-content #about .twinkling {
   top: 0;
   bottom: 0;
   z-index: 2;
+  -webkit-animation: move-background 70s linear infinite;
   animation: move-background 70s linear infinite;
 }
 
@@ -469,6 +535,7 @@ main .main-content #about .clouds {
   top: 0;
   bottom: 0;
   z-index: 3;
+  -webkit-animation: move-background 150s linear infinite;
   animation: move-background 150s linear infinite;
 }
 
@@ -495,7 +562,8 @@ main .main-content #skills .skill-container .skill {
   margin: 1.2rem 0;
   padding: 1.6rem 1.5rem;
   border-radius: 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -515,11 +583,13 @@ main .main-content #skills .skill-container .skill {
 main .main-content #skills .skill-container .skill .skill-title {
   font-weight: 700;
   font-size: 1.5rem;
+  margin-top: .3rem;
   margin-bottom: 1.2rem;
 }
 
 @media only screen and (min-width: 600px) {
   main .main-content #skills .skill-container .skill .skill-title {
+    margin-top: .5rem;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
   }
@@ -527,6 +597,7 @@ main .main-content #skills .skill-container .skill .skill-title {
 
 @media only screen and (min-width: 960px) {
   main .main-content #skills .skill-container .skill .skill-title {
+    margin-top: .8rem;
     margin-bottom: 1.8rem;
     font-size: 2rem;
   }
@@ -563,9 +634,15 @@ main .main-content #education .educ-timeline, main .main-content #workexp .educ-
 main .main-content #education .educ-timeline .educ-card, main .main-content #workexp .educ-timeline .educ-card {
   padding: 5px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -584,9 +661,15 @@ main .main-content #education .educ-timeline .educ-card .cm-icon, main .main-con
   width: 80px;
   height: 80px;
   padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
   background: #e06100;
   color: #fff;
@@ -699,11 +782,20 @@ main .main-content #cert .cert-container .award-container .award-img, main .main
 }
 
 main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -713,6 +805,7 @@ main .main-content #cert .cert-container .award-container .img-description, main
   color: #fff;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
   padding: 30px;
 }
@@ -794,6 +887,17 @@ main .main-content #cert .cert-container .award-container .img-description small
   text-align: justify;
 }
 
+@-webkit-keyframes showImage {
+  from {
+    opacity: 0;
+    right: -100px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
 @keyframes showImage {
   from {
     opacity: 0;
@@ -814,9 +918,32 @@ main .main-content #cert .cert-container .award-container .img-description small
   }
 }
 
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
 .timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 20px auto;
   position: relative;
 }
@@ -824,15 +951,21 @@ main .main-content #cert .cert-container .award-container .img-description small
 .timeline__event {
   margin-bottom: 20px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 20px 0;
   border-radius: 6px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 50vw;
 }
 
 .timeline__event:nth-child(2n + 1) {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .timeline__event:nth-child(2n + 1) .timeline__event__date {
@@ -853,8 +986,10 @@ main .main-content #cert .cert-container .award-container .img-description small
   left: 50%;
   right: auto;
   z-index: -1;
-  transform: translateX(-50%);
-  animation: fillTop 2s forwards 4s ease-in-out;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: fillTop 2s forwards 4s ease-in-out;
+          animation: fillTop 2s forwards 4s ease-in-out;
 }
 
 .timeline__event:nth-child(2n + 1) .timeline__event__icon:after {
@@ -867,8 +1002,10 @@ main .main-content #cert .cert-container .award-container .img-description small
   z-index: -1;
   top: 50%;
   left: auto;
-  transform: translateY(-50%);
-  animation: fillLeft 2s forwards 4s ease-in-out;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: fillLeft 2s forwards 4s ease-in-out;
+          animation: fillLeft 2s forwards 4s ease-in-out;
 }
 
 .timeline__event__title {
@@ -882,7 +1019,8 @@ main .main-content #cert .cert-container .award-container .img-description small
 
 .timeline__event__content {
   padding: 20px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  -webkit-box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+          box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   background: #fff;
   width: calc(40vw - 84px);
   border-radius: 0 6px 6px 0;
@@ -893,26 +1031,40 @@ main .main-content #cert .cert-container .award-container .img-description small
   font-size: 1.5rem;
   font-weight: 600;
   background: #e06100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   white-space: nowrap;
   padding: 0 20px;
   border-radius: 6px 0 0 6px;
 }
 
 .timeline__event__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #e06100;
   padding: 20px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin: 0 20px;
   background: #ffd9bd;
   border-radius: 100%;
   width: 40px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  -webkit-box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+          box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   padding: 40px;
   height: 40px;
   position: relative;
@@ -931,8 +1083,10 @@ main .main-content #cert .cert-container .award-container .img-description small
   top: 0%;
   z-index: -1;
   left: 50%;
-  transform: translateX(-50%);
-  animation: fillTop 2s forwards 4s ease-in-out;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: fillTop 2s forwards 4s ease-in-out;
+          animation: fillTop 2s forwards 4s ease-in-out;
 }
 
 .timeline__event__icon:after {
@@ -944,12 +1098,15 @@ main .main-content #cert .cert-container .award-container .img-description small
   left: 0%;
   z-index: -1;
   top: 50%;
-  transform: translateY(-50%);
-  animation: fillLeftOdd 2s forwards 4s ease-in-out;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: fillLeftOdd 2s forwards 4s ease-in-out;
+          animation: fillLeftOdd 2s forwards 4s ease-in-out;
 }
 
 .timeline__event__description {
-  flex-basis: 60%;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .timeline__event--type2:after {
@@ -1010,8 +1167,13 @@ main .main-content #cert .cert-container .award-container .img-description small
 
 @media (max-width: 786px) {
   .timeline__event {
-    flex-direction: column;
-    align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .timeline__event__content {
     width: 100%;
@@ -1020,7 +1182,8 @@ main .main-content #cert .cert-container .award-container .img-description small
     border-radius: 6px 6px 0 0;
     width: 100%;
     margin: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .timeline__event__icon:before, .timeline__event__icon:after {
     display: none;
@@ -1030,8 +1193,13 @@ main .main-content #cert .cert-container .award-container .img-description small
     padding: 20px;
   }
   .timeline__event:nth-child(2n + 1) {
-    flex-direction: column;
-    align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .timeline__event:nth-child(2n + 1) .timeline__event__date {
     border-radius: 0;
@@ -1043,9 +1211,21 @@ main .main-content #cert .cert-container .award-container .img-description small
   }
 }
 
+@-webkit-keyframes fillLeft {
+  100% {
+    right: 100%;
+  }
+}
+
 @keyframes fillLeft {
   100% {
     right: 100%;
+  }
+}
+
+@-webkit-keyframes fillTop {
+  100% {
+    top: 100%;
   }
 }
 
@@ -1055,8 +1235,15 @@ main .main-content #cert .cert-container .award-container .img-description small
   }
 }
 
+@-webkit-keyframes fillLeftOdd {
+  100% {
+    left: 100%;
+  }
+}
+
 @keyframes fillLeftOdd {
   100% {
     left: 100%;
   }
 }
+/*# sourceMappingURL=style.css.map */
