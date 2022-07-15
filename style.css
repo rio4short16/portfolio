@@ -293,6 +293,8 @@ main .main-content .section.reveal.active {
 
 main .main-content #about {
   position: relative;
+  background: rgba(0, 0, 0, 0.5) url("./images/programming.jpg") no-repeat fixed center/cover !important;
+  background-blend-mode: multiply !important;
 }
 
 main .main-content #about .cm-card {

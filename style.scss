@@ -275,6 +275,9 @@ main{
 
 		#about{
 			position: relative;
+			
+			background: rgba(0,0,0,.5) url("./images/programming.jpg") no-repeat fixed center/cover !important;
+			background-blend-mode: multiply !important;
 			.cm-card{
 				position: absolute;
 				z-index: 4;
@@ -429,9 +432,9 @@ main{
 				 right: 0;
 				 display: block;
 				   z-index: 0;
-			   }
+			}
 			   
-			   .twinkling{
+			.twinkling{
 				 width:10000px;
 				 height: 100%;
 				 background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
@@ -448,9 +451,9 @@ main{
 				 -webkit-animation:move-background 70s linear infinite;
 				 animation:move-background 70s linear infinite;
 				 
-			   }
+			}
 			   
-			   .clouds{
+			.clouds{
 				 width:10000px;
 				 height: 100%;
 				 background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
@@ -466,7 +469,7 @@ main{
 				 -o-animation:move-background 150s linear infinite;
 				 -webkit-animation:move-background 150s linear infinite;
 				 animation:move-background 150s linear infinite;
-			   }
+			}
 			   img{
 				 height: 70vh;
 				 width:70vh;
