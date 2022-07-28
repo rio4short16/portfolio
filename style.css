@@ -293,8 +293,8 @@ main .main-content .section.reveal.active {
 
 main .main-content #about {
   position: relative;
-  background: rgba(0, 0, 0, 0.5) url("./images/programming.jpg") no-repeat fixed center/cover !important;
-  background-blend-mode: multiply !important;
+  background: rgba(0, 0, 0, 0.18) url("./images/programming.jpg") no-repeat fixed center/cover !important;
+  background-blend-mode: overlay;
 }
 
 main .main-content #about .cm-card {
@@ -784,6 +784,7 @@ main .main-content #cert .cert-container .award-container .award-img, main .main
 }
 
 main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,7 +885,10 @@ main .main-content #cert .cert-container .award-container .img-description p, ma
   text-align: justify;
 }
 
-main .main-content #cert .cert-container .award-container .img-description small, main .main-content #projects .cert-container .award-container .img-description small {
+main .main-content #cert .cert-container .award-container .img-description small, main .main-content #cert .cert-container .award-container .img-description .project-info, main .main-content #projects .cert-container .award-container .img-description small, main .main-content #projects .cert-container .award-container .img-description .project-info {
+  position: relative;
+  display: block;
+  height: 110px;
   font-weight: 400;
   text-align: justify;
 }

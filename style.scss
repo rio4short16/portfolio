@@ -276,8 +276,8 @@ main{
 		#about{
 			position: relative;
 			
-			background: rgba(0,0,0,.5) url("./images/programming.jpg") no-repeat fixed center/cover !important;
-			background-blend-mode: multiply !important;
+			background: rgba(0, 0, 0, .18) url("./images/programming.jpg") no-repeat fixed center/cover !important;
+			background-blend-mode: overlay;
 			.cm-card{
 				position: absolute;
 				z-index: 4;
@@ -673,6 +673,7 @@ main{
 					}
 	
 					.img-description{
+						position: relative;
 						display: flex;
 						text-align: center;
 						flex-direction: column;
@@ -748,7 +749,10 @@ main{
 							text-align: justify;
 						}
 
-						small{
+						small, .project-info{
+							position: relative;
+							display: block;
+							height: 110px; 
 							font-weight: 400;
 							text-align: justify;
 						}
