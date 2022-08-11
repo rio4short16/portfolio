@@ -738,7 +738,7 @@ main .main-content #education .educ-timeline .educ-card .acad-info p, main .main
   }
 }
 
-main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+main .main-content #cert .cert-container, main .main-content #projects .cert-container, main .main-content #training .cert-container {
   position: relative;
   padding: 1rem 0;
   max-width: 1400px;
@@ -746,44 +746,44 @@ main .main-content #cert .cert-container, main .main-content #projects .cert-con
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+  main .main-content #cert .cert-container, main .main-content #projects .cert-container, main .main-content #training .cert-container {
     padding: 3rem 0;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  main .main-content #cert .cert-container, main .main-content #projects .cert-container {
+  main .main-content #cert .cert-container, main .main-content #projects .cert-container, main .main-content #training .cert-container {
     padding: 5rem 0;
   }
 }
 
-main .main-content #cert .cert-container details, main .main-content #projects .cert-container details {
+main .main-content #cert .cert-container details, main .main-content #projects .cert-container details, main .main-content #training .cert-container details {
   display: block !important;
   width: 100%;
 }
 
-main .main-content #cert .cert-container details summary, main .main-content #projects .cert-container details summary {
+main .main-content #cert .cert-container details summary, main .main-content #projects .cert-container details summary, main .main-content #training .cert-container details summary {
   display: block !important;
 }
 
-main .main-content #cert .cert-container .award-container, main .main-content #projects .cert-container .award-container {
+main .main-content #cert .cert-container .award-container, main .main-content #projects .cert-container .award-container, main .main-content #training .cert-container .award-container {
   display: block;
   position: relative;
   cursor: pointer;
   min-height: 280px;
 }
 
-main .main-content #cert .cert-container .award-container:hover .img-description, main .main-content #projects .cert-container .award-container:hover .img-description {
+main .main-content #cert .cert-container .award-container:hover .img-description, main .main-content #projects .cert-container .award-container:hover .img-description, main .main-content #training .cert-container .award-container:hover .img-description {
   visibility: visible;
   opacity: 1;
 }
 
-main .main-content #cert .cert-container .award-container .award-img, main .main-content #projects .cert-container .award-container .award-img {
+main .main-content #cert .cert-container .award-container .award-img, main .main-content #projects .cert-container .award-container .award-img, main .main-content #training .cert-container .award-container .award-img {
   height: 100%;
   width: 100%;
 }
 
-main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description, main .main-content #training .cert-container .award-container .img-description {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -814,36 +814,36 @@ main .main-content #cert .cert-container .award-container .img-description, main
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description, main .main-content #training .cert-container .award-container .img-description {
     padding: 35px;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description {
+  main .main-content #cert .cert-container .award-container .img-description, main .main-content #projects .cert-container .award-container .img-description, main .main-content #training .cert-container .award-container .img-description {
     padding: 40px;
   }
 }
 
-main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5, main .main-content #training .cert-container .award-container .img-description h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5, main .main-content #training .cert-container .award-container .img-description h5 {
     font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5 {
+  main .main-content #cert .cert-container .award-container .img-description h5, main .main-content #projects .cert-container .award-container .img-description h5, main .main-content #training .cert-container .award-container .img-description h5 {
     font-size: 1.8rem;
   }
 }
 
-main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span, main .main-content #training .cert-container .award-container .img-description span {
   display: block;
   font-size: 0.8rem;
   margin: 5px;
@@ -851,41 +851,41 @@ main .main-content #cert .cert-container .award-container .img-description span,
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span, main .main-content #training .cert-container .award-container .img-description span {
     font-size: 0.9rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span {
+  main .main-content #cert .cert-container .award-container .img-description span, main .main-content #projects .cert-container .award-container .img-description span, main .main-content #training .cert-container .award-container .img-description span {
     font-size: 0.8rem;
   }
 }
 
-main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6, main .main-content #training .cert-container .award-container .img-description h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6, main .main-content #training .cert-container .award-container .img-description h6 {
     font-size: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6 {
+  main .main-content #cert .cert-container .award-container .img-description h6, main .main-content #projects .cert-container .award-container .img-description h6, main .main-content #training .cert-container .award-container .img-description h6 {
     font-size: 2.2rem;
   }
 }
 
-main .main-content #cert .cert-container .award-container .img-description p, main .main-content #projects .cert-container .award-container .img-description p {
+main .main-content #cert .cert-container .award-container .img-description p, main .main-content #projects .cert-container .award-container .img-description p, main .main-content #training .cert-container .award-container .img-description p {
   font-weight: 400;
   text-align: justify;
 }
 
-main .main-content #cert .cert-container .award-container .img-description small, main .main-content #cert .cert-container .award-container .img-description .project-info, main .main-content #projects .cert-container .award-container .img-description small, main .main-content #projects .cert-container .award-container .img-description .project-info {
+main .main-content #cert .cert-container .award-container .img-description small, main .main-content #cert .cert-container .award-container .img-description .project-info, main .main-content #projects .cert-container .award-container .img-description small, main .main-content #projects .cert-container .award-container .img-description .project-info, main .main-content #training .cert-container .award-container .img-description small, main .main-content #training .cert-container .award-container .img-description .project-info {
   position: relative;
   display: block;
   height: 110px;
