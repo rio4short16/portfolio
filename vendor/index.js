@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sr.reveal(
-    "#skills .sec-title, #education .sec-title, #projects .sec-title, #workexp .sec-title, #cert .sec-title",
+    "#skills .sec-title, #education .sec-title, #projects .sec-title, #workexp .sec-title, #cert .sec-title, #training .sec-title",
     { origin: "top", distance: "200px", opacity: 0, delay: 300 }
   );
 
